@@ -1,0 +1,26 @@
+import Component from '@ember/component';
+
+export default Component.extend({
+  classNames: ['list-filter'],
+  value: '',
+
+  init() {
+    this._super(...arguments);
+    this.filter('').then(({ results }) => {
+      this.set('results', results);
+    });
+  },
+
+  actions: {
+    handleFilterEntry() {
+      let filterInputValue = this.value;
+      let filterAction = this.filter;  // filterByCity
+      filterAction(filterInputValue).then(({query,results}) => {
+        if (query === this.value) {
+          this.set('results', results);
+        }
+      });
+    }
+  }
+
+});

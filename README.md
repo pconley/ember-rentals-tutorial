@@ -1,7 +1,19 @@
-# rentals1
+# rentals
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
+
+## Real Notes (all the rest is auto generated)
+
+The secret mapbox key is in a file that is git-ignored.  
+
+So, start the ember server like this...
+
+LEAFLET_MAPS_API_KEY=`cat mapbox.key` ember s
+
+To do the build...
+
+LEAFLET_MAPS_API_KEY=`cat mapbox.key` ember build --environment=development
 
 ## Prerequisites
 

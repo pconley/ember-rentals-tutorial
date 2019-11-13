@@ -7,7 +7,4 @@
   {{/link-to}}
 </div>
 
-{{#each this.model as |rentalUnit|}}
-  <h3>{{rentalUnit.title}}</h3>
-  <RentalListing @rental={{rentalUnit}} />
-{{/each}}
+{{outlet}}
